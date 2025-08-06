@@ -2,3 +2,16 @@
 2)peça a quantidade e calcule o valor final
 3)use pelo menos uma constante para definir um desconto de 10 por centeo
 4)exiba o valor brtuo, o desconto e o valor final com clareza
+
+-------------------------------------------------------------------------
+
+Planejamento Sistema: Gerenciamento de Livraria
+
+01_Modelagem_de_dados
+	Definição do modelo de dados a ser seguido.
+02_Modelagem_das_classes
+	Definição das classes e metodos
+03_Implementação_sistema
+	Processo de desenvolvimento
+04_Testes_implantaçao
+	Testes e buscar por bugs e implantação do sistema
