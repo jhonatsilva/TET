@@ -1,0 +1,4 @@
+1)peça o nome do produto e o preco unitario
+2)peça a quantidade e calcule o valor final
+3)use pelo menos uma constante para definir um desconto de 10 por centeo
+4)exiba o valor brtuo, o desconto e o valor final com clareza
