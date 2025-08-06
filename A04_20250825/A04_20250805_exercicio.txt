@@ -15,3 +15,6 @@ Planejamento Sistema: Gerenciamento de Livraria
 	Processo de desenvolvimento
 04_Testes_implantaçao
 	Testes e buscar por bugs e implantação do sistema
+
+
+*Definição do Problema Real
