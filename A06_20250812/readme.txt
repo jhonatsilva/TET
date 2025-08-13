@@ -8,8 +8,6 @@ Estrutura de Projeto
 5_ Testes e Melhorias
 6_ Entrega e Relatório Final
 
-
-
 Depois de compreendido o que o cliente deseja
 
     Modelagem de dados MER
@@ -18,7 +16,6 @@ Depois de compreendido o que o cliente deseja
     Entrega por partes
     Testes das partes
                                            *Implantação do Sistema(Deploy)
-    
 
 ***Lista de atributos***
     cadastrar_livro
@@ -106,3 +103,4 @@ Atributos de venda
     Tax Amount (valor dos impostos aplicados)
     Payment Confirmation (confirmação do pagamento)
     Notes (observações adicionais sobre a venda)
+    
