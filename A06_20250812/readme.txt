@@ -21,55 +21,55 @@ Depois de compreendido o que o cliente deseja
     
 
 ***Lista de atributos***
-cadastrar_livro
-atualizar_livro
-deletar_livro
-buscar_livro
-listar_livros
-adicionar_estoque
-remover_estoque
-registrar_compra
-registrar_venda
-calcular_preco
-aplicar_desconto
-gerar_nota_fiscal
-gerenciar_clientes
-cadastrar_cliente
-atualizar_cliente
-deletar_cliente
-buscar_cliente
-listar_clientes
-gerenciar_fornecedores
-cadastrar_fornecedor
-atualizar_fornecedor
-deletar_fornecedor
-buscar_fornecedor
-listar_fornecedores
-gerar_relatorio_vendas
-gerar_relatorio_estoque
-gerenciar_pagamentos
-registrar_pagamento
-registrar_reembolso
-gerenciar_pedidos
-acompanhar_pedido
-cancelar_pedido
-gerenciar_categorias
-cadastrar_categoria
-atualizar_categoria
-deletar_categoria
-buscar_categoria
-listar_categorias
-gerenciar_usuarios (para administradores)
-autenticar_usuario
-registrar_usuario
-atualizar_usuario
-deletar_usuario
-gerenciar_promocoes
-cadastrar_promocao
-atualizar_promocao
-deletar_promocao
-buscar_promocao
-listar_promocoes
+    cadastrar_livro
+    atualizar_livro
+    deletar_livro
+    buscar_livro
+    listar_livros
+    adicionar_estoque
+    remover_estoque
+    registrar_compra
+    registrar_venda
+    calcular_preco
+    aplicar_desconto
+    gerar_nota_fiscal
+    gerenciar_clientes
+    cadastrar_cliente
+    atualizar_cliente
+    deletar_cliente
+    buscar_cliente
+    listar_clientes
+    gerenciar_fornecedores
+    cadastrar_fornecedor
+    atualizar_fornecedor
+    deletar_fornecedor
+    buscar_fornecedor
+    listar_fornecedores
+    gerar_relatorio_vendas
+    gerar_relatorio_estoque
+    gerenciar_pagamentos
+    registrar_pagamento
+    registrar_reembolso
+    gerenciar_pedidos
+    acompanhar_pedido
+    cancelar_pedido
+    gerenciar_categorias
+    cadastrar_categoria
+    atualizar_categoria
+    deletar_categoria
+    buscar_categoria
+    listar_categorias
+    gerenciar_usuarios (para administradores)
+    autenticar_usuario
+    registrar_usuario
+    atualizar_usuario
+    deletar_usuario
+    gerenciar_promocoes
+    cadastrar_promocao
+    atualizar_promocao
+    deletar_promocao
+    buscar_promocao
+    listar_promocoes
 
 Entidades do livro 
     ID (unique identifier for the book)
@@ -88,3 +88,21 @@ Entidades do livro
     Status (e.g., Available, Out of Stock, Pre-order)
     Added Date (date the book was added to the system)
     Last Updated Date 
+
+Atributos de venda 
+    Sale ID (identificador único da venda)
+    Customer ID (identificador do cliente)
+    Book ID(s) (identificador do(s) livro(s) vendido(s))
+    Quantity (quantidade de livros vendidos)
+    Total Price (preço total da venda)
+    Discount (desconto aplicado, se houver)
+    Payment Method (método de pagamento, ex.: cartão, boleto, etc.)
+    Sale Date (data da venda)
+    Status (ex.: Concluída, Cancelada, Pendente)
+    Invoice Number (número da nota fiscal)
+    Employee ID (identificador do funcionário que realizou a venda)
+    Shipping Address (endereço de entrega, se aplicável)
+    Delivery Status (ex.: Enviado, Entregue, Aguardando envio)
+    Tax Amount (valor dos impostos aplicados)
+    Payment Confirmation (confirmação do pagamento)
+    Notes (observações adicionais sobre a venda)
