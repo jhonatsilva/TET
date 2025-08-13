@@ -71,3 +71,20 @@ deletar_promocao
 buscar_promocao
 listar_promocoes
 
+Entidades do livro 
+    ID (unique identifier for the book)
+    Title
+    Author(s)
+    Publisher
+    ISBN (International Standard Book Number)
+    Genre/Category
+    Language
+    Publication Date
+    Edition
+    Number of Pages
+    Price
+    Stock Quantity
+    Description/Synopsis
+    Status (e.g., Available, Out of Stock, Pre-order)
+    Added Date (date the book was added to the system)
+    Last Updated Date 
