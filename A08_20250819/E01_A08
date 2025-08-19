@@ -1,0 +1,121 @@
+from datetime import datetime
+c1 = "A"
+c2 = "Ç"
+c3 = " "
+s1 = "Ana"
+s2 = "Olá mundo"
+
+print(type(c1))
+print(type(c2))
+print(type(c3))
+print(type(s1))
+print(type(s2))
+
+print(len("Jhonathan Inacio da Silva"))
+print(len("Rua Professor Orlando Alves Chaves 538"))
+
+
+a = "Pyton"
+b = "Programação"
+c = """Linha 1
+Linha 2
+Linha 3"""
+
+print(a)
+print(b)
+print(c)
+
+s1 = "Ele disse 'oi'"
+s2 = 'Ela respondeu "Olá"'
+
+print(s1)
+print(s2)
+
+print("Data" + " Science")
+print("ha" * 10)
+print("Py"  in "Python") 
+print("Python" not in "Python")  
+
+print(ord("ç"))
+print(chr(231))
+
+print(ord("J"))
+print(ord("h"))
+print(ord("o"))
+print(ord("n"))
+print(ord("a"))
+print(ord("t"))
+print(ord("h"))
+print(ord("a"))
+print(ord("n"))
+
+print(len("J") + len("h") + len("o") + len("n") + len("a") + len("t") + len("h") + len("a") + len("n"))
+
+print("python".upper())
+print("PYTHON".lower())         
+print("python".capitalize())
+print("jhonathan inacio da silva".title())
+
+s = "banana maçã uva banana abacaxi banana"
+print(s.count("banana"))
+print(s.find("banana"))     
+print(s.rfind("banana"))
+print(s.startswith("banana"))
+print(s.endswith("banana"))
+
+frase = "Ordem e Progresso"
+print(frase.replace("e", "&&"))
+
+palavras = frase.split()
+print(palavras)
+
+itens = ["a", "b", "c"]     
+print(" | ".join(itens))
+
+from datetime import datetime
+
+from datetime import datetime
+
+from datetime import datetime
+
+nome = "Jhonathan Inacio da Silva"
+idade = 30
+inicio_curso = '01/01/2022'
+data_atual = datetime.now().strftime('%d/%m/%Y')
+fim_curso = '01/01/2026'
+
+# Convertendo as strings de data para objetos datetime
+inicio_curso_data = datetime.strptime(inicio_curso, '%d/%m/%Y')
+data_atual_data = datetime.strptime(data_atual, '%d/%m/%Y')
+fim_curso_data = datetime.strptime(fim_curso, '%d/%m/%Y')
+
+# Calculando o tempo que já passou desde o início do curso
+tempo_decorrido_dias = (data_atual_data - inicio_curso_data).days
+tempo_decorrido_anos = tempo_decorrido_dias // 365  # Aproximando para anos inteiros
+
+# Calculando o tempo restante para o fim do curso
+tempo_restante_dias = (fim_curso_data - data_atual_data).days
+tempo_restante_anos = tempo_restante_dias // 365  # Aproximando para anos inteiros
+
+print(f"{nome} tem {idade} anos.")
+print(f"O curso começou em {inicio_curso} e já se passaram {tempo_decorrido_anos} anos ({tempo_decorrido_dias} dias).")
+print(f"Faltam {tempo_restante_anos} anos ({tempo_restante_dias} dias) para o fim do curso.")
+
+texto = "relatorio"
+print(f"{texto:-^20}")
+print(f"{texto:.<20}")
+print(f"{texto:.>20}")
+
+produtoA = input("Digite o nome do Produto A: ")
+preco1 = float(input("Digite o preço do Produto 1: "))
+     
+produtoB = input("Digite o nome do Produto B: ")  
+preco2 = float(input("Digite o preço do Produto 2: "))      
+
+produtoC = input("Digite o nome do Produto C: ")
+preco3 = float(input("Digite o preço do Produto 3: "))
+
+print("\nProduto             Preço")
+print(f"{produtoA:20} R$ {preco1:.2f}")    
+print(f"{produtoB:<20} R$ {preco2:.2f}")
+print(f"{produtoC:<20} R$ {preco3:.2f}")
