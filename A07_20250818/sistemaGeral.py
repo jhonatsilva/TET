@@ -62,12 +62,15 @@ def vender_livros():
             print("Quantidade insuficiente em estoque!")
         else:
             valor_total = quantidade_venda * livro["preco"]
-            valor_com_desconto = valor_total * (1 - DESCONTO)
-
-            # Atualizando o estoque
+            if valor_total >= 100:
+                valor_com_desconto = valor_total * (1 - DESCONTO)
+            else:
+                valor_com_desconto = valor_total
+                
+            # Atualiza o estoque
             livro["quantidade"] -= quantidade_venda
 
-            # Registrando a venda
+            # Registra a venda
             livros_vendidos.append({
                 "titulo": livro["titulo"],
                 "quantidade": quantidade_venda,
