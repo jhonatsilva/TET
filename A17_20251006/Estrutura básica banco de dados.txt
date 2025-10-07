@@ -1,0 +1,98 @@
+-- ================================
+-- ESTRUTURA DO BANCO DE DADOS
+-- ================================
+
+-- Tabela de estados
+CREATE TABLE estados (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    sigla TEXT NOT NULL UNIQUE,
+    nome TEXT NOT NULL
+);
+
+-- Tabela de cidades
+CREATE TABLE cidades (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    estado_id INTEGER NOT NULL,
+    FOREIGN KEY (estado_id) REFERENCES estados(id)
+);
+
+-- Tabela de modelos de veículos
+CREATE TABLE modelos_veiculo (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    ano_modelo INTEGER NOT NULL
+);
+
+-- Tabela de ocorrências de roubo
+CREATE TABLE ocorrencias_roubo (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    modelo_id INTEGER NOT NULL,
+    cidade_id INTEGER NOT NULL,
+    ano_roubo INTEGER NOT NULL,
+    FOREIGN KEY (modelo_id) REFERENCES modelos_veiculo(id),
+    FOREIGN KEY (cidade_id) REFERENCES cidades(id)
+);
+
+-- ================================
+-- EXEMPLO DE DADOS
+-- ================================
+
+-- Estados
+INSERT INTO estados (sigla, nome) VALUES
+('SP', 'São Paulo'),
+('RJ', 'Rio de Janeiro'),
+('MG', 'Minas Gerais'),
+('BA', 'Bahia');
+
+-- Cidades
+INSERT INTO cidades (nome, estado_id) VALUES
+('São Paulo', 1),
+('Campinas', 1),
+('Rio de Janeiro', 2),
+('Belo Horizonte', 3),
+('Salvador', 4);
+
+-- Modelos de veículos
+INSERT INTO modelos_veiculo (nome, ano_modelo) VALUES
+('Gol', 2018),
+('Onix', 2020),
+('Civic', 2019),
+('Uno', 2017),
+('Corolla', 2021),
+('Ka', 2019);
+
+-- Ocorrências de roubo
+INSERT INTO ocorrencias_roubo (modelo_id, cidade_id, ano_roubo) VALUES
+(1, 1, 2023), -- Gol em SP
+(2, 2, 2023), -- Onix em Campinas
+(3, 3, 2022), -- Civic no RJ
+(4, 4, 2023), -- Uno em BH
+(1, 2, 2022), -- Gol em Campinas
+(2, 1, 2021), -- Onix em SP
+(5, 5, 2022), -- Corolla em Salvador
+(6, 2, 2023); -- Ka em Campinas
+
+-- ================================
+-- VIEW PARA TREINAMENTO DE IA
+-- ================================
+
+CREATE VIEW vw_dados_roubo_ml AS
+SELECT 
+    o.ano_roubo,
+    mv.nome AS modelo,
+    mv.ano_modelo,
+    c.nome AS cidade,
+    e.sigla AS estado
+FROM ocorrencias_roubo o
+JOIN modelos_veiculo mv ON o.modelo_id = mv.id
+JOIN cidades c ON o.cidade_id = c.id
+JOIN estados e ON c.estado_id = e.id
+ORDER BY o.ano_roubo DESC;
+
+-- ================================
+-- CONSULTA FINAL (EXEMPLO)
+-- ================================
+
+-- Execute isso para ver os dados:
+SELECT * FROM vw_dados_roubo_ml;
