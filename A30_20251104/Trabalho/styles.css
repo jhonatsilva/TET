@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Fundo em tom claro */
+    color: #333; /* Texto em tom escuro */
+}
+
+header {
+    background-color: #003366; /* Azul escuro */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+#upload {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #00509e; /* Azul médio */
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #003f7f; /* Azul mais escuro */
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Azul padrão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
+
+.filters, .analysis-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff; /* Branco */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filters h3, .analysis-section h3 {
+    margin-bottom: 10px;
+    color: #003366; /* Azul escuro */
+}
+
+.filters select, .filters input, .analysis-section select {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filters label, .analysis-section label {
+    font-weight: bold;
+}

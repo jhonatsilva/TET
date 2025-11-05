@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raio-X das Ocorrências Criminais em CWB">
+    <meta name="author" content="Seu Nome">
+    <title>Raio-X das Ocorrências Criminais em CWB</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
+</head>
+<body>
+    <header>
+        <h1>Raio-X das Ocorrências Criminais em CWB</h1>
+    </header>
+    <main>
+        <section id="upload">
+            <h2>Carregar Arquivo</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="file-upload" class="custom-file-upload">
+                    Escolher Arquivo
+                </label>
+                <input type="file" id="file-upload" name="file" accept=".xlsx">
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section class="filters">
+            <h3>Filtros</h3>
+            <label for="year">Ano:</label>
+            <select id="year" name="year">
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+            </select>
+
+            <label for="semester">Semestre:</label>
+            <select id="semester" name="semester">
+                <option value="1">1º Semestre</option>
+                <option value="2">2º Semestre</option>
+            </select>
+
+            <label for="crime-type">Tipo de Crime:</label>
+            <select id="crime-type" name="crime-type">
+                <option value="furto">Furto</option>
+                <option value="roubo">Roubo</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <label for="neighborhood">Bairro:</label>
+            <input type="text" id="neighborhood" name="neighborhood" placeholder="Digite o bairro">
+        </section>
+
+        <section class="analysis-section">
+            <h3>Análises Disponíveis</h3>
+            <label for="analysis-type">Selecione uma Análise:</label>
+            <select id="analysis-type" name="analysis-type">
+                <option value="insights">Analisar insights de crimes (tipo de crime, quantidade, top 30 bairros com mais crimes)</option>
+                <option value="weekly-crimes">Quantidade de crimes nos dias da semana (por crime e bairro)</option>
+                <option value="crime-neighborhood">Quantidade de crimes por crime-bairro (período com mais crimes no bairro)</option>
+                <option value="residential-crimes">Crimes em moradias residenciais (filtros por bairro, período, dia da semana)</option>
+                <option value="thefts-robberies">Furtos e roubos gerais (filtros por bairro, período, dias da semana)</option>
+            </select>
+
+            <!-- Gráfico -->
+            <h3>Gráfico de Crimes por Tipo</h3>
+            <canvas id="crimeChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>

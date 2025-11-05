@@ -1,0 +1,9 @@
+SafeZones CWB – Inteligência Territorial para Segurança Urbana
+
+Descrição Geral
+
+SafeZones CWB é uma aplicação web desenvolvida em Python (Flask) que permite o 
+upload de arquivos Excel (.xlsx) contendo registros de ocorrências criminais em Curitiba.
+A partir desses dados, o sistema gera dashboards interativos, mapas de calor e 
+realiza predições automáticas com Machine Learning para apoiar empresas de segurança privada 
+e pública na tomada de decisão estratégica.

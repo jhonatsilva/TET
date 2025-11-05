@@ -1,0 +1,54 @@
+file type 
+---------------------------- filtro ano 2024 semestre 1/2
+                                        2025
+
+
+lista
+	Analisar insignths
+	crime(tipo de crime)
+
+		apontar as quantidades de crimes
+		e topo 30 dos bairros com mais crime
+
+		apresentar grafico
+		ranking dos bairros
+------------------------------------
+
+	quantidade de crimes nos dias da seman
+		crime e bairro
+			aponta qual dia da semana que mais teve o crime escolhido
+
+
+---------------------------------
+	quantidade de crimes por crime-Bairro
+		aprsentar periodo com mais crimes no bairro
+
+
+------------------------------------
+	crimes em moradias residenciais
+		filtros por bairro
+		filtros para mostrar período com mais crimes por bairro
+		filtro por dia da semana
+		Principais 
+
+---------------------------------------
+	furtos e roubos geral
+		filtro bairro
+			período que há mais furtos e roubos por bairro
+                	Dias da semana que cada bairro tem mais furtos e roubo
+			
+	Crimes perigosos no geral
+		filtro periodo/bairro
+			exemplo(quais crimes há no centro cedo/tarde/noite
+                        
+
+---------------------------------------
+	Crimes em horario comercial
+		filtro por bairro
+			
+
+
+
+
+
+
